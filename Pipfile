@@ -7,6 +7,8 @@ name = "pypi"
 pytest = "*"
 assertpy = "*"
 requests = "*"
+lxml = "*"
+jsonpath-ng = "*"
 
 [dev-packages]
 
