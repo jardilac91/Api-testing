@@ -24,13 +24,13 @@ def test_add_new_user():
 
 
 def test_delete_person():
-    person_last_name = client.create_person()
+    last_name, _ = client.create_person()
 
     peoples = client.read_all_persons().as_dict
-    new_person_id = search_created_user_in(peoples, person_last_name)['person_id']
+    new_person_id = search_created_user_in(peoples, last_name)['person_id']
 
     response = client.delete_person(new_person_id)
-    assert_that(response.status_code).is_equal_to(requests.status_codes.ok)
+    assert_that(response.status_code).is_equal_to(requests.codes.ok)
 
 
 def test_person_can_be_added_with_a_json_template(create_data):
