@@ -30,4 +30,3 @@ def test_validate_schema_for_all_users():
         for person in persons:
             is_valid = validator.validate(person)
             assert_that(is_valid, description=validator.errors).is_true()
-
